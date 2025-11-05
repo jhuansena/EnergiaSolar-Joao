@@ -177,3 +177,96 @@ footer {
   from { transform: translateY(20px); opacity: 0; }
   to   { transform: translateY(0); opacity: 1; }
 }
+
+
+/* ========================= */
+/* RESPONSIVIDADE */
+/* ========================= */
+
+/* Telas até 900px (tablets) */
+@media (max-width: 900px) {
+  nav {
+    gap: 15px;
+  }
+
+  nav a {
+    padding: 10px 18px;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  .grid-projetos {
+    gap: 20px;
+  }
+
+  .projeto-card {
+    width: 260px;
+  }
+
+  .perfil-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Telas até 600px (celulares grandes) */
+@media (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav a {
+    width: 45%;
+    text-align: center;
+    padding: 10px 14px;
+  }
+
+  .projeto-card {
+    width: 85%;
+  }
+
+  section {
+    padding: 30px 16px;
+  }
+
+  .perfil-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  header h1 {
+    font-size: 1.9rem;
+  }
+}
+
+/* Telas até 400px (celulares pequenos) */
+@media (max-width: 400px) {
+
+  nav a {
+    width: 100%;
+  }
+
+  #btn-whatsapp {
+    right: 14px;
+    bottom: 14px;
+    padding: 14px 18px;
+  
+  }
+
+  #popup-venda {
+    bottom: 15px;
+    left: 15px;
+    padding: 14px 16px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+}

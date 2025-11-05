@@ -1,4 +1,4 @@
-// Rolagem suave para navegação
+// Rolagem suave
 document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
@@ -8,12 +8,24 @@ document.querySelectorAll('nav a').forEach(link => {
   });
 });
 
-// Botão WhatsApp pulsando
-setInterval(() => {
-  const btn = document.getElementById("btn-whatsapp");
-  btn.style.transform = "scale(1.15)";
-  setTimeout(() => btn.style.transform = "scale(1)", 300);
-}, 3000);
+// Detectar se está em um dispositivo móvel
+function isMobile() {
+  return /Android|iPhone|iPad|iPod|Windows Phone|webOS/i.test(navigator.userAgent);
+}
+
+// Controlar visibilidade do botão WhatsApp
+const btnWhats = document.getElementById("btn-whatsapp");
+if (isMobile()) {
+  btnWhats.style.display = "none"; // Esconde no celular
+}
+
+// Animação de pulsar (apenas se estiver visível / PC)
+if (!isMobile()) {
+  setInterval(() => {
+    btnWhats.style.transform = "scale(1.15)";
+    setTimeout(() => btnWhats.style.transform = "scale(1)", 300);
+  }, 3000);
+}
 
 // Pop-up vendedor chamando ação
 setTimeout(() => {
@@ -27,4 +39,3 @@ setTimeout(() => {
   `;
   document.body.appendChild(popup);
 }, 8000);
-
