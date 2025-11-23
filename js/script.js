@@ -16,10 +16,10 @@ function isMobile() {
 // Controlar visibilidade do botão WhatsApp
 const btnWhats = document.getElementById("btn-whatsapp");
 if (isMobile()) {
-  btnWhats.style.display = "none"; // Esconde no celular
+  btnWhats.style.display = "none"; 
 }
 
-// Animação de pulsar (apenas se estiver visível / PC)
+// Animação de pulsar (apenas para PC)
 if (!isMobile()) {
   setInterval(() => {
     btnWhats.style.transform = "scale(1.15)";
@@ -34,7 +34,11 @@ setTimeout(() => {
     <div id="popup-venda">
       💡 Já pensou em reduzir até <b>95%</b> da sua conta de luz?
       <br><br>
-      <a id="popup-btn" href="https://w.app/3lmyca" target="_blank">Quero saber mais</a>
+      <a id="popup-btn" 
+         href="https://wa.me/5511917181701?text=Olá!%20Quero%20saber%20mais%20sobre%20energia%20solar." 
+         target="_blank">
+         Quero saber mais
+      </a>
     </div>
   `;
   document.body.appendChild(popup);
